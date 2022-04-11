@@ -1,0 +1,142 @@
+.aside { 
+
+ 
+  min-width: 320px;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+	transition: 0.5s;
+  .open {
+    left: 0;
+  }
+  .unblock {
+    width: 100vw;
+		height: 100vh;
+  }
+  &__overlay {
+    position: fixed;
+		background: #fff;
+		opacity: 0.96;
+  }
+  &__close {
+    position: absolute;
+    top:-100px;
+    left: -100px;
+    width: 40px;
+		height: 40px;
+    
+		background-color: $main-color;
+		border-radius: 50%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: 0.3s;
+
+		.icon-close {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&:hover {
+			background-color: $hover-color;
+
+			.icon {
+				svg {
+					path {
+						fill: $main-color;
+					}
+				}
+			}
+		}
+  }
+  &__wraper{
+
+    height: inherit;
+    background-color: #fff;
+    position: fixed;
+    width: 320px;
+    z-index: 100000;
+  }
+  &__aside-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 16px 20px;
+  }
+  &__body {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__menu{
+    padding: 0;
+  }
+  &__link{
+    padding: 14px 20px;
+    transition: 0.1s;
+    border-left: 3px solid #fff;
+    a{
+      font-size: 16px;
+      font-weight: 500;
+      color: $text-color;
+    }
+    &:hover {
+      border-left: 3px solid #41F6D7;
+      a{
+        color:#7E7E82;
+      }
+    }
+  }
+  &__info {
+    padding-left: 20px;
+  }
+  &__action {
+    display: flex;
+    flex-direction: column;
+    .unit{
+      margin-right: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        background-color: $hover-color;
+        .unit{
+          &__icon{
+            svg{
+              path{
+                fill: $main-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__email {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 16px;
+  }
+  &__phone {
+    color: $text-color;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 12px;
+  }
+  &__translated {
+    margin-top: 40px;
+    
+    span{
+      cursor: pointer;
+      margin-right: 10px;
+      color: $text-color;
+      transition: 0.1s;
+      &:hover {
+        color: #7E7E82;
+      }
+    }
+  }
+}

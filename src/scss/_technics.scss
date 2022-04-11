@@ -1,0 +1,58 @@
+.technics {
+	max-width: 1120px;
+	margin: 0 auto;
+	&__block {
+		display: grid;
+		grid-template-columns: 240px 240px 240px 240px;
+		grid-auto-rows: 160px;
+		gap: 16px 32px;
+		max-height: 160px;
+    overflow: hidden;
+	}
+	.visible {
+		max-height: 1600px;
+		overflow: visible;
+	}
+	&__box {
+
+		padding: 12px 16px;
+
+		background-color: #fff;
+		display: flex;
+		justify-content: space-between;
+		align-content: space-between;
+		box-sizing: border-box;
+		border-radius: 5px;
+		border: 1px solid #EAEAEA;
+		cursor: pointer;
+		transition: 0.3s;
+		&:hover {
+			border: 2px solid $hover-color;
+			.box-icon{
+				background-color: $hover-color;
+				border: 2px solid $hover-color;
+			}	
+				
+		}
+	}
+	&__box-text{
+		font-size: 16px;
+		font-weight: 500;
+		color: $text-color;
+	}
+	.box-icon {
+		width: 40px;
+		height: 40px;
+		border: 2px solid $main-color;
+		background-color: #fff;
+		border-radius: 50%;
+		display: inline-flex;
+		align-self: flex-end;
+		justify-content: center;
+		&__icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}

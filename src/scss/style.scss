@@ -1,0 +1,169 @@
+$bgColor: #F8F8F8;
+$main-color: #FF3E79;
+$hover-color: #fde7ee;
+$text-color: #1B1C21;
+
+@import 'normalize';
+@import 'promo';
+@import 'aside';
+@import 'brands';
+@import 'technics';
+@import 'services';
+@import 'footer';
+@import 'search-box';
+@import 'sidebar';
+@import 'media';
+@import 'header';
+
+@font-face {
+  font-family: 'TTLakes';
+  font-display: swap;
+  src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTLakes';
+  font-display: swap;
+  src: url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTLakes';
+  font-display: swap;
+  src: url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: TTLakes, sans-serif;
+  background-color: $bgColor;
+}
+
+section {
+  padding: 42px 32px 0 32px;
+}
+
+
+
+.main {
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+}
+// .container {
+//   padding: 42px 32px 0 32px;
+// }
+.unit {
+  width: 40px;
+  height: 40px;
+  background-color: $main-color;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.show {
+  margin-top: 10px;
+  display: flex;
+  cursor: pointer;
+  transition: 0.6s;
+  &__text {
+    font-weight: 500;
+    font-size: 16px
+  }
+
+  &__icon {
+    padding: 0 10px;
+  }
+}
+
+
+
+.title {
+  padding: 13px 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: #7E7E82;
+  font-weight: lighter;
+  background: linear-gradient(170deg, #F8F8F8 0%, #FFFFFF 98.61%);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/////////////////////
+
+
+.btn {
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+
+  font-weight: bold;
+  color: #fff;
+  background-color: $main-color;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.2s;
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    background-color: $hover-color;
+    color: $main-color;
+
+    .btn {
+      &__icon {
+        svg {
+          path {
+            fill: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.inactive {
+  display: none;
+}
+.menu-active{
+  display: block;
+  transition: 1s;
+}
+.up {
+  .show__icon{
+    transition: 0.3s;
+    transform: rotate(180deg);
+  }
+}
+
+.open {
+  left: 0;
+}
+.swiper-container-thre {
+  display: none;
+}

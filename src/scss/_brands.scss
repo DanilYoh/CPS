@@ -1,0 +1,60 @@
+.brands {
+	max-width: 1120px;
+	margin: 0 auto;
+	&__block {
+		display: grid;
+		grid-template-columns: 240px 240px 240px 240px;
+		grid-auto-rows: 72px 72px;
+		gap: 16px 32px;
+		// display: flex;
+		// flex-wrap: wrap;
+		max-height: 160px;
+    overflow: hidden;
+	}
+	.visible {
+		max-height: 1600px;
+		overflow: visible;
+	}
+	&__box {
+		// margin: 0 24px 16px 0;
+		padding: 12px 16px;
+		// width: 240px;
+		// height: 72px;
+		background-color: #fff;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		box-sizing: border-box;
+		border-radius: 5px;
+		border: 1px solid #EAEAEA;
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			border: 2px solid $hover-color;
+
+			.box-icon {
+				background-color: $hover-color;
+				border: 2px solid $hover-color;
+			}
+
+		}
+	}
+
+	.box-icon {
+		width: 40px;
+		height: 40px;
+		border: 2px solid $main-color;
+		background-color: #fff;
+		border-radius: 50%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		&__icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}

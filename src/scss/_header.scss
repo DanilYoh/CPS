@@ -1,0 +1,48 @@
+.header {
+	width: 100%;
+  display: none;
+	background-color: #fff;
+	max-height: 88px;
+	padding: 24px;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		.unit {
+			cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        background-color: $hover-color;
+        .unit{
+          &__icon{
+            svg{
+              path{
+                fill: $main-color;
+              }
+            }
+          }
+        }
+      }
+		}
+	}
+
+ &__social {
+	display: flex;
+	.unit {
+		margin-left: 20px;
+		
+	}
+ }
+ &__left {
+	 display: flex;
+	 .logo {
+		 margin-left: 20px;
+
+	 }
+ }
+ span {
+	 margin-left: 20px;
+	 height: 38px;
+	 width: 2px;
+	 background-color: #EAEAEA;
+ }
+}

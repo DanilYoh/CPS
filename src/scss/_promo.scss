@@ -1,0 +1,128 @@
+.promo {
+  position: relative;
+  .blue-line {
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    top: 36px;
+    left: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px ;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    color: black;
+    font-size: 28px;
+    font-weight: 700px;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 22px;
+    margin-left: 10px;
+    transition: 0.2s;
+    border-radius: 25px;
+    &:hover {
+
+      box-shadow: 0 0 2px 1px $main-color;
+
+      .text {
+        color: $main-color;
+      }
+
+      .unit {
+        background-color: $hover-color;
+
+        &__icon {
+          svg {
+            path {
+              fill: $main-color;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  &__text {
+    margin-right: 10px;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+
+
+  &__nav {
+
+    .section-menu {
+
+      box-sizing: content-box;
+      display: flex;
+      margin: 9px 0 0 0;
+      flex-wrap: wrap;
+      padding: 0;
+      
+      &__item {
+        width: inherit;
+        border: 2px solid $bgColor;
+        border-radius: 5px;
+        padding: 10px 18.5px;
+        max-width: max-content;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          border: 2px solid #B8FFEC;
+        }
+      }
+
+      &__link {
+        font-size: 16px;
+        font-weight: 500;
+        color: #7E7E82;
+      }
+    }
+  }
+
+  &__discription {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__paragraph {
+    margin-right: 0;
+    width: 47%;
+
+  }
+  &__info{
+    max-height: 160px;
+    overflow: hidden;
+
+    p {
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 400;
+      color: $text-color;
+    }
+  }
+}
+.visible {
+  max-height: 1600px;
+  overflow: visible;
+}
